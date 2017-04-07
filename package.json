@@ -4,7 +4,8 @@
   "description": "EventStroming DSL for Generate EventStroming Graphics",
   "main": "entry.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
