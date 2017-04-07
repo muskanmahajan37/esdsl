@@ -21,7 +21,7 @@ var esDsl = {
 
 var fs = require('fs');
 var path = require('path');
-var raw = fs.readFileSync(path.normalize('./phodal.ddd'), 'utf8');
+var raw = fs.readFileSync(__dirname + '/demo/phodal.ddd', 'utf8');
 
 esDsl.parse(raw);
 
