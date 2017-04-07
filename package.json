@@ -2,7 +2,7 @@
   "name": "esdsl",
   "version": "0.2.0",
   "description": "EventStroming DSL for Generate EventStroming Graphics",
-  "main": "entry.js",
+  "main": "src/entry.js",
   "scripts": {
     "test": "ava",
     "watch": "npm test -- --watch"
