@@ -4,7 +4,7 @@
   "description": "EventStroming DSL for Generate EventStroming Graphics",
   "main": "entry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "homepage": "https://github.com/phodal/EventStorming.Graph#readme",
   "dependencies": {
     "jison": "^0.4.17"
+  },
+  "devDependencies": {
+    "ava": "^0.19.0"
   }
 }

@@ -1,27 +1,11 @@
-var fs = require('fs');
-var Parser = require("jison").Parser;
+import test from 'ava';
 
-var diagram = require("./diagram");
-var bnf = fs.readFileSync(__dirname + '/es-dsl.jison', 'utf8');
+test('foo', t => {
+  t.pass();
+});
 
-var esDsl = {
-  parse: function (input) {
-    var parser = new Parser(bnf);
-    parser.yy = diagram.Diagram;
+test('bar', async t => {
+    const bar = Promise.resolve('bar');
 
-    parser.yy.currentDomain = [];
-    parser.yy.data = [];
-
-    var result = parser.parse(input);
-    console.log(result.data);
-    console.log(JSON.stringify(result.aggregate));
-    return result;
-  }
-};
-
-var fs = require('fs');
-var path = require('path');
-var raw = fs.readFileSync(path.normalize('./phodal.ddd'), 'utf8');
-
-esDsl.parse(raw);
-
+    t.is(await bar, 'bar');
+});
